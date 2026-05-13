@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahsulotlar — Limon</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="shop">
+
+<div id="headerSlot"></div>
+
+<section class="page-head">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Bosh</a><span class="sep">›</span><span>Mahsulotlar</span>
+    </div>
+    <h1 id="shopTitle">Barcha mahsulotlar</h1>
+    <p id="resultsCount" class="text-muted">Yuklanmoqda...</p>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="shop-layout">
+      <aside class="shop-sidebar">
+        <div class="filter-block">
+          <h4>📂 KATEGORIYA</h4>
+          <div class="filter-list" id="filterCategories"></div>
+        </div>
+        <div class="filter-block">
+          <h4>📍 VILOYAT</h4>
+          <div class="filter-list" id="filterRegions" style="max-height:220px; overflow-y:auto;"></div>
+        </div>
+        <div class="filter-block">
+          <h4>🌿 TURI</h4>
+          <div class="filter-list" id="filterOrganic"></div>
+        </div>
+        <div class="filter-block">
+          <h4>💰 NARX (so'm)</h4>
+          <div class="price-range">
+            <input id="minPrice" type="number" placeholder="0">
+            <span>—</span>
+            <input id="maxPrice" type="number" placeholder="200000">
+          </div>
+          <button id="applyPrice" class="btn btn-ghost btn-sm btn-block mt-4">Qo'llash</button>
+        </div>
+      </aside>
+
+      <div class="shop-main">
+        <div class="shop-toolbar">
+          <div class="shop-search-bar">
+            <span>🔍</span>
+            <input id="shopSearch" placeholder="Pomidor, sut, asal...">
+          </div>
+          <select id="shopSort" class="shop-sort-select">
+            <option value="popular">Mashhurlik bo'yicha</option>
+            <option value="new">Yangi hosil</option>
+            <option value="price-asc">Narx: arzondan</option>
+            <option value="price-desc">Narx: qimmatdan</option>
+          </select>
+        </div>
+
+        <div class="product-grid" id="shopResults">
+          <div class="spinner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footerSlot"></div>
+
+<script src="js/data.js"></script>
+<script src="js/api.js"></script>
+<script src="js/main.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>

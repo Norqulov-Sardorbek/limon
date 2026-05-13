@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Limon — Dehqondan to'g'ridan-to'g'ri do'koningizga</title>
+<meta name="description" content="Limon — B2B platforma. Dehqonlardan do'konlarga 1-qo'l qishloq xo'jaligi mahsulotlari. Vositachisiz, arzon, toza.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="home">
+
+<div id="headerSlot"></div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="dot"></span> 1240+ dehqon · 3850+ do'kon · 14 viloyat
+      </div>
+      <h1 class="hero-title">
+        Dehqondan <em>do'koningizga</em> — vositachisiz
+      </h1>
+      <p class="hero-desc">
+        Limon — bu B2B platforma. Bozor zanjiridagi 3-5 ta vositachini olib tashlaymiz: do'kon egasi mahsulotni to'g'ridan-to'g'ri dehqondan oladi. <b>20-30% arzonroq, 100% toza, kafolatlangan sifat.</b>
+      </p>
+      <div class="hero-cta">
+        <a href="shop.html" class="btn btn-primary btn-lg">🛍️ Mahsulotlarga</a>
+        <a href="login.html" class="btn btn-ghost btn-lg">👨‍🌾 Dehqon bo'lish</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat-item"><h3 data-count="1240">0</h3><p>Tasdiqlangan dehqon</p></div>
+        <div class="hero-stat-item"><h3 data-count="3850">0</h3><p>Faol do'kon</p></div>
+        <div class="hero-stat-item"><h3 data-count="28500">0</h3><p>Yetkazib berish</p></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-emoji-orbit">
+        <div class="center">🥬</div>
+      </div>
+      <div class="hero-card c1">
+        <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=200&q=80" alt="">
+        <div>
+          <h4>Olma (Andijon)</h4>
+          <p>Toirov xo'jaligi</p>
+          <div class="price">8 500 so'm/kg</div>
+        </div>
+      </div>
+      <div class="hero-card c2">
+        <img src="https://images.unsplash.com/photo-1574323347407-f5e1c0cf4b59?w=200&q=80" alt="">
+        <div>
+          <h4>Bug'doy uni</h4>
+          <p>Oliy nav</p>
+          <div class="price">6 800 so'm/kg</div>
+        </div>
+      </div>
+      <div class="hero-card c3">
+        <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?w=200&q=80" alt="">
+        <div>
+          <h4>Tabiiy sut</h4>
+          <p>4 soatda yetkazib</p>
+          <div class="price">8 500 so'm/l</div>
+        </div>
+      </div>
+      <div class="hero-card c4">
+        <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=200&q=80" alt="">
+        <div>
+          <h4>Tog' asali</h4>
+          <p>Chimyon</p>
+          <div class="price">95 000 so'm/kg</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST BAR ============ -->
+<section class="trust-bar">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <h3>−27%</h3>
+        <p>O'rtacha narx tejash</p>
+      </div>
+      <div class="trust-item">
+        <h3>4 soat</h3>
+        <p>Toshkent ichida yetkazish</p>
+      </div>
+      <div class="trust-item">
+        <h3>100%</h3>
+        <p>Sifat kafolati</p>
+      </div>
+      <div class="trust-item">
+        <h3>24/7</h3>
+        <p>Qo'llab-quvvatlash</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KATEGORIYALAR ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Mahsulotlar</span>
+      <h2 class="section-title">Kategoriyalar</h2>
+      <p class="section-subtitle">Mavsumiy, yangi yig'ilgan — to'g'ridan-to'g'ri yetishtiruvchidan.</p>
+    </div>
+    <div class="cat-grid" id="categoriesGrid"></div>
+  </div>
+</section>
+
+<!-- ============ QANDAY ISHLAYDI ============ -->
+<section class="section" style="background:var(--surface-2);">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Jarayon</span>
+      <h2 class="section-title">Limon qanday ishlaydi?</h2>
+      <p class="section-subtitle">4 ta oddiy bosqich — do'koningizga toza mahsulot yetib keladi.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="how-num">1</div>
+        <h3>Ro'yxatdan o'tasiz</h3>
+        <p>Do'kon yoki dehqon sifatida 2 daqiqada akkaunt ochasiz.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">2</div>
+        <h3>Mahsulot tanlaysiz</h3>
+        <p>Katalogdan kerakli mahsulotni topib, kerakli miqdorni belgilab beradi.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">3</div>
+        <h3>Dehqon tayyorlaydi</h3>
+        <p>Buyurtma to'g'ridan-to'g'ri dehqonga boradi — u tayyorlab, qadoqlab beradi.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">4</div>
+        <h3>Yetkazib beriladi</h3>
+        <p>Limon logistika xizmati 4-24 soat ichida do'koningizga yetkazib beradi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BESTSELLER ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">⭐ Bestseller</span>
+      <h2 class="section-title">Eng ko'p sotib olinadiganlar</h2>
+      <p class="section-subtitle">3850+ do'kon tanlaganidek.</p>
+    </div>
+    <div class="product-grid" id="bestsellersGrid"></div>
+    <div class="text-center mt-8">
+      <a href="shop.html" class="btn btn-ghost btn-lg">Barcha mahsulotlarni ko'rish →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ YANGI HOSIL ============ -->
+<section class="section" style="background:var(--surface-2);">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">🌱 Yangi hosil</span>
+      <h2 class="section-title">Bu hafta yig'ilganlari</h2>
+      <p class="section-subtitle">Mavsumiy mahsulotlar — eng yangi.</p>
+    </div>
+    <div class="product-grid" id="freshGrid"></div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-banner">
+      <div>
+        <h2>Dehqonmisiz? Mahsulotingizni Limon orqali soting</h2>
+        <p>Vositachilarsiz, to'g'ridan-to'g'ri do'konlarga. Oylik daromadingiz 30-50% ortishi mumkin.</p>
+        <div class="actions">
+          <a href="login.html" class="btn btn-accent btn-lg">👨‍🌾 Dehqon bo'lib qo'shilish</a>
+          <a href="how.html" class="btn btn-light btn-lg">Batafsil →</a>
+        </div>
+      </div>
+      <div class="cta-visual">
+        <div class="item"><span>📈</span><h5>+30%</h5><p>Daromad o'sishi</p></div>
+        <div class="item"><span>🚚</span><h5>Bepul</h5><p>Logistika qo'llanma</p></div>
+        <div class="item"><span>💰</span><h5>7 kun</h5><p>To'lov sikli</p></div>
+        <div class="item"><span>📱</span><h5>2 daq</h5><p>Ro'yxatdan o'tish</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHARHLAR ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Mijozlar</span>
+      <h2 class="section-title">Limon haqida nima deyishadi</h2>
+      <p class="section-subtitle">Do'kon egalarining real fikrlari.</p>
+    </div>
+    <div class="testimonials-grid" id="testimonialsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" style="background:var(--surface-2);">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Ko'p so'raladigan savollar</h2>
+    </div>
+    <div class="faq-list" id="faqList"></div>
+    <div class="text-center mt-8">
+      <a href="about.html#faq" class="btn btn-ghost">Ko'proq savollar →</a>
+    </div>
+  </div>
+</section>
+
+<div id="footerSlot"></div>
+
+<script src="js/data.js"></script>
+<script src="js/api.js"></script>
+<script src="js/main.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aloqa — Limon</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="contact">
+
+<div id="headerSlot"></div>
+
+<section class="page-head">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Bosh</a><span class="sep">›</span><span>Aloqa</span>
+    </div>
+    <h1>Biz bilan bog'lanish</h1>
+    <p>Savollaringiz bormi? Biz har doim yordamga tayyormiz.</p>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Aloqa ma'lumotlari</h2>
+
+        <div class="contact-item">
+          <div class="ico">📞</div>
+          <div>
+            <h4>Telefon</h4>
+            <p>+998 91 894 06 16<br>+998 88 329 06 16</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ico">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <p>info@limon.uz<br>nsardorbek776@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ico">📍</div>
+          <div>
+            <h4>Manzil</h4>
+            <p>Toshkent shahar, Yunusobod tumani, Amir Temur ko'chasi 108</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ico">🕐</div>
+          <div>
+            <h4>Ish vaqti</h4>
+            <p>Du-Sha: 08:00 — 20:00<br>Ya: 09:00 — 18:00</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ico">💬</div>
+          <div>
+            <h4>Telegram bot</h4>
+            <a href='https://t.me/limon_b2b_bot' target='_blank'>@limon_b2b_bot — 24/7</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="checkout-form" style="margin:0;">
+        <h2 style="font-size:24px; font-weight:800; margin-bottom:8px;">Xabar yuboring</h2>
+        <p class="text-muted mb-8">24 soat ichida javob beramiz.</p>
+
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Ism *</label>
+              <input class="form-input" name="name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Telefon</label>
+              <input class="form-input" name="phone" placeholder="+998 ...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email *</label>
+            <input class="form-input" type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Mavzu *</label>
+            <select class="form-select" name="topic" required>
+              <option value="">Tanlang...</option>
+              <option>Yangi mijoz sifatida</option>
+              <option>Dehqon bo'lib qo'shilish</option>
+              <option>Texnik yordam</option>
+              <option>Buyurtma bo'yicha savol</option>
+              <option>Hamkorlik takliflari</option>
+              <option>Boshqa</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Xabar *</label>
+            <textarea class="form-textarea" name="message" required style="min-height:140px;"></textarea>
+          </div>
+          <button class="btn btn-primary btn-block btn-lg" type="submit">Yuborish</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP placeholder -->
+<section class="section-sm">
+  <div class="container">
+    <div style="background:var(--surface); border:1.5px solid var(--border); border-radius:20px; overflow:hidden; height:400px; display:grid; place-items:center; background:linear-gradient(135deg, var(--primary-light), #FFFCE8);">
+      <div style="text-align:center;">
+        <div style="font-size:64px;">📍</div>
+        <h3 style="font-size:20px; font-weight:700; margin:8px 0;">Toshkent, Yunusobod tumani</h3>
+        <p class="text-muted">Amir Temur ko'chasi 108</p>
+        <a href="https://yandex.com/maps/" target="_blank" class="btn btn-primary mt-4">Xaritada ko'rish →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footerSlot"></div>
+
+<script src="js/data.js"></script>
+<script src="js/api.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector("button[type=submit]");
+      btn.disabled = true; btn.textContent = "Yuborilmoqda...";
+      setTimeout(() => {
+        toast("Xabaringiz yuborildi! 24 soat ichida javob beramiz.", "success");
+        e.target.reset();
+        btn.disabled = false; btn.textContent = "Yuborish";
+      }, 800);
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirish — Limon</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="login">
+
+<div id="headerSlot"></div>
+
+<div class="auth-page">
+  <!-- Left brand panel -->
+  <div class="auth-side">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">🍋</div>
+      <div class="brand-name" style="color:#fff;">Li<b style="color:var(--accent);">mon</b></div>
+    </a>
+    <div>
+      <h2>1-qo'l mahsulotlar uchun B2B platforma</h2>
+      <p>Dehqondan to'g'ridan-to'g'ri do'koningizga. Vositachilarsiz. Toza, arzon, kafolatlangan.</p>
+    </div>
+    <div class="auth-features">
+      <div class="auth-feature">
+        <div class="ico">💰</div>
+        <div>
+          <h4>20-30% tejash</h4>
+          <p>Vositachilarsiz narx</p>
+        </div>
+      </div>
+      <div class="auth-feature">
+        <div class="ico">🚚</div>
+        <div>
+          <h4>4 soatda yetkazib berish</h4>
+          <p>Toshkent shahri ichida</p>
+        </div>
+      </div>
+      <div class="auth-feature">
+        <div class="ico">✓</div>
+        <div>
+          <h4>100% sifat kafolati</h4>
+          <p>Tekshiruvdan o'tgan dehqonlar</p>
+        </div>
+      </div>
+      <div class="auth-feature">
+        <div class="ico">📦</div>
+        <div>
+          <h4>1240+ dehqon, 3850+ do'kon</h4>
+          <p>O'zbekiston bo'ylab</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right form -->
+  <div class="auth-content">
+    <div style="display:flex; gap:8px; margin-bottom:32px; border-bottom:2px solid var(--border);">
+      <button id="tabLogin" class="pd-tab active">Kirish</button>
+      <button id="tabReg" class="pd-tab">Ro'yxatdan o'tish</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <form id="formLogin" style="display:block;">
+      <h1>Xush kelibsiz!</h1>
+      <p>Davom etish uchun tizimga kiring.</p>
+
+      <div id="loginError" class="form-error" style="display:none;"></div>
+
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input class="form-input" type="email" name="email" required placeholder="email@example.com">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Parol</label>
+        <input class="form-input" type="password" name="password" required minlength="6" placeholder="••••••">
+      </div>
+      <button class="btn btn-primary btn-block btn-lg" type="submit">Kirish</button>
+
+      <div class="auth-demo">
+        <b>Demo akkauntlar:</b><br>
+        🏪 Do'kon: <button type="button" data-demo="dukon@limon.uz" style="color:var(--primary); font-weight:600;">dukon@limon.uz / demo123</button><br>
+        👨‍🌾 Dehqon: <button type="button" data-demo="dehqon@limon.uz" style="color:var(--primary); font-weight:600;">dehqon@limon.uz / demo123</button>
+      </div>
+
+      <div class="auth-switch">
+        Akkauntingiz yo'qmi? <a href="#" onclick="document.getElementById('tabReg').click(); return false;">Ro'yxatdan o'ting</a>
+      </div>
+    </form>
+
+    <!-- REGISTER FORM -->
+    <form id="formReg" style="display:none;">
+      <h1>Ro'yxatdan o'tish</h1>
+      <p>2 daqiqada akkaunt yarating va Limon'dan foydalanishni boshlang.</p>
+
+      <div id="regError" class="form-error" style="display:none;"></div>
+
+      <div class="role-tabs">
+        <div class="role-tab active" data-role="shop">
+          <div class="ico">🏪</div>
+          <h4>Do'kon</h4>
+          <p>Mahsulot sotib olaman</p>
+        </div>
+        <div class="role-tab" data-role="farmer">
+          <div class="ico">👨‍🌾</div>
+          <h4>Dehqon</h4>
+          <p>Mahsulot sotaman</p>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">To'liq ism *</label>
+          <input class="form-input" name="name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Telefon *</label>
+          <input class="form-input" name="phone" required placeholder="+998 90 ...">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Email *</label>
+        <input class="form-input" type="email" name="email" required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Parol *</label>
+          <input class="form-input" type="password" name="password" required minlength="6">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Parolni takrorlang *</label>
+          <input class="form-input" type="password" name="password2" required minlength="6">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Viloyat *</label>
+          <select class="form-select" name="region" required>
+            <option value="">Tanlang...</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Manzil *</label>
+          <input class="form-input" name="address" required placeholder="Tuman, mahalla">
+        </div>
+      </div>
+
+      <div id="shopFields" style="display:block;">
+        <div class="form-group">
+          <label class="form-label">Do'kon nomi</label>
+          <input class="form-input" name="shopName" placeholder="Yangi Market">
+        </div>
+      </div>
+      <div id="farmerFields" style="display:none;">
+        <div class="form-group">
+          <label class="form-label">Xo'jalik nomi</label>
+          <input class="form-input" name="farmName" placeholder="Toirov fermer xo'jaligi">
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-block btn-lg" type="submit">Ro'yxatdan o'tish</button>
+
+      <div class="auth-switch">
+        Akkauntingiz bormi? <a href="#" onclick="document.getElementById('tabLogin').click(); return false;">Kirish</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="footerSlot"></div>
+
+<script src="js/data.js"></script>
+<script src="js/api.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

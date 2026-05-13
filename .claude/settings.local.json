@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"from docx import Document; doc = Document\\('oraliq_nazorat_yoriqnoma.docx'\\); [print\\(p.text\\) for p in doc.paragraphs]\")",
+      "PowerShell(Test-Path *)",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\asada\\\\Desktop\\\\limon_wmp\\\\index.html\")",
+      "Bash(awk -F/ '{ *)",
+      "Bash(pip --version)",
+      "Bash(mkdir -p C:/Users/asada/Desktop/limon_wmp/backend)",
+      "Bash(python -m venv venv)",
+      "Bash(./venv/Scripts/pip.exe install *)",
+      "Bash(./venv/Scripts/django-admin.exe startproject *)",
+      "Bash(./venv/Scripts/python.exe manage.py startapp accounts)",
+      "Bash(./venv/Scripts/python.exe manage.py startapp catalog)",
+      "Bash(./venv/Scripts/python.exe manage.py startapp orders)",
+      "Bash(./venv/Scripts/python.exe manage.py startapp wishlist)",
+      "Bash(./venv/Scripts/python.exe manage.py makemigrations accounts catalog orders wishlist promo)",
+      "Bash(./venv/Scripts/python.exe manage.py migrate)",
+      "Bash(./venv/Scripts/python.exe manage.py seed_demo)",
+      "Bash(./venv/Scripts/python.exe manage.py runserver 127.0.0.1:8000)",
+      "Bash(curl -s -o - -w \"\\\\nSTATUS:%{http_code}\\\\n\" http://127.0.0.1:8000/api/categories/)",
+      "Bash(curl -s -o - -w \"\\\\nSTATUS:%{http_code}\\\\n\" -X POST -H \"Content-Type: application/json\" -d '{\"email\":\"dukon@limon.uz\",\"password\":\"demo123\"}' http://127.0.0.1:8000/api/auth/login/)",
+      "Bash(curl -s -X POST -H \"Content-Type: application/json\" -d '{\"email\":\"dukon@limon.uz\",\"password\":\"demo123\"}' http://127.0.0.1:8000/api/auth/login/)",
+      "Bash(python -c \"import sys,json;d=json.load\\(sys.stdin\\);print\\('ok=',d.get\\('ok'\\),'id=',d['order']['id'],'total=',d['order']['total']\\)\")",
+      "Bash(curl -s -X POST -H \"Content-Type: application/json\" -d '{\"code\":\"BEPUL\",\"subtotal\":400000}' http://127.0.0.1:8000/api/promo/validate/)",
+      "Bash(curl -s -X POST -H \"Content-Type: application/json\" -d '{\"code\":\"YANGI10\",\"subtotal\":100000}' http://127.0.0.1:8000/api/promo/validate/)",
+      "Bash(curl -s http://127.0.0.1:8000/api/farmers/)",
+      "Bash(python -c \"import sys,json;d=json.load\\(sys.stdin\\);print\\(len\\(d\\),'farmers, sample:',d[0]['name'],'\\(',d[0]['region'],'\\)'\\)\")",
+      "Bash(curl -s http://127.0.0.1:8000/api/categories/)",
+      "Bash(python -c \"import sys,json;d=json.load\\(sys.stdin\\);print\\([c['id'] for c in d]\\)\")",
+      "Bash(curl -s -X POST -H 'Content-Type: application/json' -d '{\"email\":\"dukon@limon.uz\",\"password\":\"demo123\"}' http://127.0.0.1:8000/api/auth/login/)",
+      "Bash(curl -s -H \"Authorization: Bearer $\\(curl -s -X POST -H 'Content-Type: application/json' -d '{\"email\":\"dukon@limon.uz\",\"password\":\"demo123\"}' http://127.0.0.1:8000/api/auth/login/)",
+      "Bash(python -c \"import sys,json;d=json.load\\(sys.stdin\\);print\\('shop order count:',len\\(d\\)\\);print\\('latest:',d[0]['id'],'status=',d[0]['status'],'items=',len\\(d[0]['items']\\)\\)\")",
+      "Bash(taskkill //F //IM python.exe)",
+      "Bash(./venv/Scripts/python.exe manage.py startapp content)",
+      "Bash(./venv/Scripts/python.exe manage.py makemigrations content)",
+      "Bash(./venv/Scripts/python.exe -c ' *)"
+    ]
+  }
+}
